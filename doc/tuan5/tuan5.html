@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Báo cáo Ứng dụng AI Tạo sinh</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --blue: #2563eb;
+        --ink: #1e293b;
+        --body: #334155;
+        --bg: #f8fafc;
+        --border: #e2e8f0;
+        --accent: #10b981;
+    }
+    body {
+        font-family: 'Be Vietnam Pro', sans-serif;
+        background: var(--bg);
+        color: var(--body);
+        line-height: 1.75;
+        margin: 0;
+        padding: 2rem 1rem;
+    }
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 3.5rem 4rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    
+    /* Header Report */
+    .report-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid var(--border);
+    }
+    .report-title {
+        color: var(--ink);
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
+    }
+    .student-info {
+        background-color: #f8fafc;
+        border: 1px dashed #cbd5e1;
+        border-radius: 8px;
+        padding: 1.5rem;
+        display: inline-block;
+        text-align: left;
+    }
+    .student-info p {
+        margin: 0.3rem 0;
+        font-size: 0.95rem;
+    }
+    .student-info strong {
+        display: inline-block;
+        min-width: 120px;
+        color: var(--navy);
+    }
+
+    h2 {
+        color: var(--blue);
+        font-size: 1.25rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        padding-left: 12px;
+        border-left: 4px solid var(--blue);
+        text-transform: uppercase;
+    }
+    h3 {
+        color: var(--ink);
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-weight: 700;
+        background-color: #f1f5f9;
+        padding: 8px 12px;
+        border-radius: 6px;
+    }
+    p {
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+    ul, ol {
+        margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Info blocks */
+    .highlight-box {
+        background-color: #eff6ff;
+        border-left: 4px solid var(--blue);
+        padding: 1rem 1.25rem;
+        border-radius: 6px;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+    }
+    .highlight-box strong {
+        color: #1d4ed8;
+    }
+    
+    .note-box {
+        background-color: #fef2f2;
+        border: 1px solid #fecaca;
+        color: #991b1b;
+        padding: 0.75rem 1rem;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        font-style: italic;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Hình ảnh phụ lục */
+    .appendix {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 2px dashed var(--border);
+    }
+    .img-wrap {
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+    .img-wrap figure {
+        margin: 0;
+        background: var(--bg);
+        padding: 1rem;
+        border-radius: 8px;
+        border: 1px dashed #cbd5e1;
+    }
+    .img-wrap img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .img-wrap figcaption {
+        font-size: 0.9rem;
+        color: var(--ink);
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        text-align: left;
+    }
+
+    @media (max-width: 768px) {
+        .container { padding: 2rem 1.5rem; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="report-header">
+        <h1 class="report-title">BÁO CÁO BÀI TẬP: ỨNG DỤNG AI TẠO SINH TRONG SÁNG TẠO NỘI DUNG SỐ</h1>
+    </div>
+
+    <h2>PHẦN I: THÔNG TIN DỰ ÁN</h2>
+    <div class="highlight-box">
+        <p><strong>1. Tên dự án:</strong> Thiết kế Slide thuyết trình chuyên đề "Ứng dụng thuật toán AI vào tối ưu hóa Game Engine 2D bằng C++"</p>
+        <p><strong>2. Loại hình nội dung:</strong> Bài thuyết trình kết hợp Infographic kỹ thuật.</p>
+        <p><strong>3. Mục tiêu:</strong> Trình bày nguyên lý hoạt động của các thuật toán tìm kiếm như Minimax trong việc tạo bot cho game, đồng thời trực quan hóa quy trình này để sinh viên năm nhất hoặc năm hai có thể dễ dàng tiếp thu.</p>
+    </div>
+
+    <h2>PHẦN II: CHI TIẾT SỬ DỤNG CÔNG CỤ AI TẠO SINH</h2>
+    <p>Để đảm bảo hiệu suất và chất lượng, tôi đã ứng dụng 3 công cụ AI tạo sinh khác nhau phục vụ cho từng khâu cụ thể. Dưới đây là bằng chứng và nhật ký sử dụng.</p>
+    <div class="note-box">
+        📌 Lưu ý: Vui lòng xem 5 ảnh chụp màn hình minh họa chi tiết quá trình prompt và kết quả được đính kèm ở trang cuối của báo cáo này.
+    </div>
+
+    <h3>1. Công cụ AI tạo văn bản - Google Gemini</h3>
+    <p>Tôi sử dụng Gemini để cấu trúc dàn ý logic và nháp các đoạn giải thích thuật toán toán học phức tạp.</p>
+    <ul>
+        <li><strong>Prompt đã sử dụng:</strong> Đóng vai một kỹ sư phần mềm chuyên về C++. Hãy viết một dàn ý thuyết trình gồm 5 phần, giải thích cách áp dụng thuật toán Minimax có tích hợp Alpha-beta pruning cho một game đối kháng 2D đơn giản. Yêu cầu giọng văn học thuật, tập trung vào độ phức tạp thời gian Big O.</li>
+        <li><strong>Kết quả nhận được:</strong> Gemini trả về một cấu trúc rất mạch lạc từ định nghĩa Game Tree đến cách tối ưu hóa cắt tỉa nhánh. Tuy nhiên, phần giải thích code khá chung chung và mang tính lý thuyết suông.</li>
+        <li><strong>Cách chỉnh sửa:</strong> Tôi đã giữ lại cấu trúc 5 phần nhưng viết lại toàn bộ phần giải code. Tôi đưa mã nguồn thực tế từ dự án game Tic-Tac-Toe cá nhân của mình vào, giải thích rõ các bước đệ quy để người nghe dễ hình dung hơn.</li>
+    </ul>
+
+    <h3>2. Công cụ AI tạo hình ảnh - Midjourney</h3>
+    <p>Tôi dùng Midjourney để tạo ra các hình ảnh minh họa mang tính ẩn dụ nhằm tăng sự thu hút cho slide mở đầu và các slide chuyển phần.</p>
+    <ul>
+        <li><strong>Prompt đã sử dụng:</strong> A retro pixel art illustration of an artificial intelligence brain connected to a computer motherboard, dark theme, neon green and black colors, highly detailed, 16:9 aspect ratio.</li>
+        <li><strong>Kết quả nhận được:</strong> Hệ thống sinh ra 4 lựa chọn hình ảnh có tính thẩm mỹ rất cao, đúng phong cách pixel art cổ điển mà tôi mong muốn.</li>
+        <li><strong>Cách chỉnh sửa:</strong> Tôi chọn bức ảnh có bố cục tốt nhất và tải về. Sau đó, tôi dùng phần mềm chỉnh sửa ảnh để làm mờ nhẹ phần hậu cảnh, tạo khoảng trống tĩnh để chèn văn bản tiêu đề lên trên mà không bị rối mắt.</li>
+    </ul>
+
+    <h3>3. Công cụ AI hỗ trợ thiết kế - Canva AI Magic Design</h3>
+    <p>Tôi sử dụng tính năng Magic Design của Canva để tạo layout tổng thể cho bài thuyết trình một cách nhanh chóng.</p>
+    <ul>
+        <li><strong>Prompt đã sử dụng:</strong> Tạo một bản thuyết trình học thuật về khoa học máy tính và lập trình C++, sử dụng tông màu chủ đạo là đen và xanh lá cây phong cách terminal.</li>
+        <li><strong>Kết quả nhận được:</strong> Canva AI tự động dàn trang 10 slide với các bố cục chữ và ảnh xen kẽ khá hiện đại.</li>
+        <li><strong>Cách chỉnh sửa:</strong> Bố cục do AI tạo ra hơi rập khuôn. Tôi phải tinh chỉnh lại kích thước các khối văn bản để chứa vừa các đoạn code C++ mà không bị vỡ dòng. Tôi cũng thay thế các icon có sẵn của Canva bằng các sơ đồ luồng thuật toán do chính tôi vẽ.</li>
+    </ul>
+
+    <h2>PHẦN III: QUÁ TRÌNH SÁNG TẠO VÀ TÍCH HỢP</h2>
+    <p>Trong dự án này, tỷ lệ đóng góp được phân định rõ ràng: AI đảm nhiệm khoảng 35% khối lượng công việc ở khâu lên ý tưởng và tạo tài nguyên thô, trong khi đóng góp cá nhân của tôi chiếm 65% ở khâu chuyên môn, kiểm chứng và hoàn thiện.</p>
+    <ol>
+        <li><strong>Bước 1: Phá vỡ rào cản ý tưởng ban đầu.</strong> Thay vì ngồi nhìn màn hình trắng, tôi dùng Gemini để vạch ra lộ trình. Ngay khi có dàn ý, tôi biết mình cần tập trung vào việc giải thích cách hàm đánh giá trạng thái hoạt động thay vì đi lan man vào giao diện đồ họa.</li>
+        <li><strong>Bước 2: Chuẩn bị môi trường và mã nguồn.</strong> Vì slide yêu cầu tính thực tế cao, tôi không dùng code do AI sinh ra. Tôi sử dụng môi trường quen thuộc của mình là Arch Linux để chạy lại các đoạn mã C++, chụp lại màn hình console lúc bot đang tính toán thời gian thực thi để làm minh chứng sống động cho bài thuyết trình.</li>
+        <li><strong>Bước 3: Tích hợp hình ảnh và thiết kế.</strong> Tôi lấy nền tảng template từ Canva AI, chèn các bức ảnh pixel art từ Midjourney vào slide tiêu đề. Tại các slide kỹ thuật số liệu, tôi tự thiết kế các bảng so sánh thời gian chạy thuật toán. Sự kết hợp này mang lại một sản phẩm vừa có tính nghệ thuật cao nhờ AI, vừa đảm bảo sự chính xác tuyệt đối về mặt kỹ thuật lập trình do chính con người kiểm soát.</li>
+    </ol>
+
+    <h2>PHẦN IV: SO SÁNH VÀ PHÂN TÍCH CÔNG CỤ AI</h2>
+    <p>Qua quá trình làm việc, tôi nhận thấy mỗi công cụ đều có điểm mạnh và giới hạn riêng biệt, tác động trực tiếp đến luồng công việc.</p>
+    <ul>
+        <li><strong>Về mảng tư duy logic:</strong> Google Gemini thể hiện sự vượt trội trong việc hiểu các khái niệm kỹ thuật sâu. Khi tôi yêu cầu phân tích về Big O, mô hình đưa ra lập luận toán học rất chính xác. Tuy nhiên, điểm hạn chế là văn phong tiếng Việt đôi khi bị máy móc. Để khắc phục, tôi đóng vai trò là một biên tập viên, biên dịch lại ngôn ngữ máy sang ngôn ngữ tự nhiên, gần gũi với tư duy của sinh viên kỹ thuật.</li>
+        <li><strong>Về mảng thị giác:</strong> Midjourney không có đối thủ trong việc tạo ra concept art ấn tượng chỉ trong vài giây. Dù vậy, điểm yếu chí mạng của Midjourney là không thể sinh ra các sơ đồ khoa học hoặc văn bản chính xác. Nếu yêu cầu AI vẽ một "Cây trò chơi" chứa các con số thuật toán, kết quả trả về sẽ là những ký tự vô nghĩa.</li>
+        <li><strong>Về mảng dàn trang:</strong> Canva AI Magic Design là một trợ lý đắc lực để tiết kiệm thời gian định dạng chữ và phối màu. Tuy nhiên, nó thiếu khả năng hiểu ngữ cảnh sâu sắc của nội dung. Nó thường đặt các hình ảnh minh họa không liên quan vào các slide chứa code kỹ thuật, buộc người dùng phải can thiệp thủ công rất nhiều.</li>
+    </ul>
+
+    <h2>PHẦN V: PHÂN TÍCH VAI TRÒ CỦA AI VÀ VẤN ĐỀ ĐẠO ĐỨC</h2>
+    
+    <h3>1. Cách AI thay đổi quy trình sáng tạo</h3>
+    <p>Trí tuệ nhân tạo đã định hình lại hoàn toàn cách tôi tiếp cận một dự án nội dung. Trước đây, quy trình tuyến tính đòi hỏi tôi phải tốn hàng giờ để tìm kiếm ảnh minh họa trên các kho ảnh miễn phí hay tự tay căn chỉnh từng slide. Hiện tại, AI đóng vai trò như một người trợ lý nghiên cứu cấp dưới. Nó làm những công việc tốn sức, lặp lặp lại để tôi có thể dồn 100% năng lượng tinh thần vào việc đảm bảo tính chính xác của thuật toán C++ và chất lượng thông điệp truyền tải.</p>
+    
+    <h3>2. Vấn đề đạo đức cần cân nhắc</h3>
+    <p>Việc sử dụng AI trong môi trường học thuật đặt ra những câu hỏi nghiêm túc về tính nguyên bản và quyền tác giả. Thứ nhất, đối với hình ảnh tạo từ Midjourney, bản chất thuật toán là học từ hàng triệu bức tranh có bản quyền của các nghệ sĩ trên internet. Việc sử dụng chúng cho dự án thương mại sẽ là một vùng xám pháp lý lớn. Dù đây là bài tập môn học, tôi vẫn phải ghi chú rõ nguồn gốc hình ảnh là do AI tạo ra để đảm bảo tính minh bạch.</p>
+    <p>Thứ hai, trong việc lập trình và viết báo cáo, nếu lạm dụng Gemini để sinh mã nguồn hoặc viết bài mà không kiểm chứng, đó là hành vi đạo văn. Sự khác biệt giữa "sử dụng AI như một công cụ hỗ trợ" và "nhờ AI làm hộ" nằm ở khâu biên tập và tư duy phản biện. Con người phải luôn là người chịu trách nhiệm cuối cùng cho tính đúng đắn của mọi dòng lệnh và câu chữ được xuất bản.</p>
+
+    <div class="appendix">
+        <h2 style="text-align: center; border: none; padding: 0;">PHỤ LỤC: ẢNH CHỤP MÀN HÌNH MINH HỌA</h2>
+        
+        <div class="img-wrap">
+            <figure>
+                <figcaption>Hình ảnh 1: Giao diện Google Gemini với prompt yêu cầu tạo dàn ý thuyết trình.</figcaption>
+                <img src="images/img1.png" alt="Google Gemini Prompt">
+            </figure>
+        </div>
+
+        <div class="img-wrap">
+            <figure>
+                <figcaption>Hình ảnh 2: Giao diện Google Gemini với kết quả trả về và quá trình tinh chỉnh lại nội dung code.</figcaption>
+                <img src="images/img2.png" alt="Google Gemini Result">
+            </figure>
+        </div>
+
+        <div class="img-wrap">
+            <figure>
+                <figcaption>Hình ảnh 3: Giao diện Discord sử dụng Midjourney bot sinh ảnh.</figcaption>
+                <img src="images/img3.png" alt="Midjourney Interface">
+            </figure>
+        </div>
+
+        <div class="img-wrap">
+            <figure>
+                <figcaption>Hình ảnh 4: Giao diện Canva AI Magic Design đang tự động tạo layout slide.</figcaption>
+                <img src="images/img4.png" alt="Canva AI Magic Design">
+            </figure>
+        </div>
+
+        <div class="img-wrap">
+            <figure>
+                <figcaption>Hình ảnh 5: Không gian làm việc cá nhân thể hiện sự tích hợp kết quả từ AI vào bài thuyết trình hoàn chỉnh.</figcaption>
+                <img src="images/img5.png" alt="Workspace Integration">
+            </figure>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

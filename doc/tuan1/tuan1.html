@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hướng dẫn Xubuntu - Quản lý tệp</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --blue: #2563eb;
+        --ink: #1e293b;
+        --body: #334155;
+        --bg: #f8fafc;
+        --border: #e2e8f0;
+    }
+    body {
+        font-family: 'Be Vietnam Pro', sans-serif;
+        background: var(--bg);
+        color: var(--body);
+        line-height: 1.75;
+        margin: 0;
+        padding: 2rem 1rem;
+    }
+    .container {
+        max-width: 950px; 
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 3rem 4rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    h1 {
+        color: var(--ink);
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid var(--border);
+    }
+    .step {
+        margin-bottom: 3rem;
+    }
+    .step-title {
+        font-size: 1.15rem;
+        color: var(--blue);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+    }
+    .step p, .step ul {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* LUÔN LUÔN LÀ 2 ẢNH MỖI HÀNG */
+    .img-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    figure {
+        margin: 0;
+        text-align: center;
+        background: var(--bg);
+        padding: 1rem;
+        border-radius: 8px;
+        border: 1px dashed #cbd5e1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    figure img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        margin: auto;
+    }
+    figcaption {
+        font-size: 0.8rem;
+        color: #64748b;
+        margin-top: 1rem;
+        font-style: italic;
+    }
+    @media (max-width: 768px) {
+        .container { padding: 2rem 1.5rem; }
+        .img-grid { grid-template-columns: 1fr; } /* Trên đt tự động thành 1 cột cho đỡ bé */
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>HƯỚNG DẪN DÀNH CHO HỆ ĐIỀU HÀNH LINUX - XUBUNTU</h1>
+
+    <div class="step">
+        <div class="step-title">1. Mở File Explorer</div>
+        <p>Nhấn tổ hợp phím <strong>Windows + E</strong> hoặc nhấp vào biểu tượng trên thanh tác vụ.</p>
+        <div class="img-grid">
+            <figure>
+                <img src="images/image2.png" alt="Mở file explorer">
+                <figcaption>Hình 1: Mở file explorer bằng phím tắt hoặc biểu tượng trên thanh tác vụ</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image18.png" alt="Giao diện sau khi mở">
+                <figcaption>Hình 2: Giao diện sau khi mở</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">2. Truy cập ổ đĩa/thư mục</div>
+        <p>Ở cột bên trái, nhấp vào <strong>This PC</strong>, sau đó nhấp đúp vào một ổ đĩa không phải ổ hệ thống (ví dụ: ổ D: hoặc E:). Nếu chỉ có ổ C:, hãy vào thư mục Documents.</p>
+        <div class="img-grid">
+            <figure>
+                <img src="images/image17.png" alt="Tìm thư mục Documents">
+                <figcaption>Hình 3: Tìm thư mục Documents trong ổ C:</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image10.png" alt="Bên trong thư mục Documents">
+                <figcaption>Hình 4: Bên trong thư mục Documents</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">3. Tạo thư mục mới</div>
+        <p>Nhấp chuột phải vào một khoảng trống &rarr; chọn <strong>New</strong> &rarr; <strong>Folder</strong>. Đặt tên thư mục là <code>ThucHanh_hotensinhvien</code> (ví dụ: ThucHanh_NguyenHoangVan). Nhấn Enter.</p>
+        <div class="img-grid">
+            <figure>
+                <img src="images/image24.png" alt="Create Folder">
+                <figcaption>Hình 5: Chọn Create Folder trong menu chuột phải</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image7.png" alt="Đặt tên thư mục">
+                <figcaption>Hình 6: Đặt tên thư mục là ThucHanh_NguyenHoangVan</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image1.png" alt="Tạo thành công">
+                <figcaption>Hình 7: Thư mục đã được tạo thành công</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">4. Vào thư mục vừa tạo</div>
+        <p>Nhấp đúp vào thư mục <code>ThucHanh_NguyenHoangVan</code> vừa tạo.</p>
+        <div class="img-grid">
+            <figure>
+                <img src="images/image1.png" alt="Nhấp đúp vào thư mục">
+                <figcaption>Hình 8: Nhấp đúp vào thư mục ThucHanh_NguyenHoangVan</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image29.png" alt="Bên trong thư mục">
+                <figcaption>Hình 9: Bên trong thư mục</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">5. Tạo tệp tin văn bản</div>
+        <p>Nhấp chuột phải vào khoảng trống &rarr; <strong>Create Document</strong> &rarr; <strong>Empty File Document</strong>. Đặt tên là <code>GhiChu.txt</code>. Nhấn Enter.</p>
+        <div class="img-grid">
+            <figure>
+                <img src="images/image5.png" alt="Tạo file text">
+                <figcaption>Hình 10: Mở menu chuột phải và tạo file text</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image33.png" alt="Đặt tên file">
+                <figcaption>Hình 11: Đặt tên là GhiChu.txt</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image15.png" alt="File được tạo">
+                <figcaption>Hình 12: File đã được tạo</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">6. Đổi tên tệp tin</div>
+        <p>Nhấp chuột phải vào tệp GhiChu.txt &rarr; chọn <strong>Rename</strong>. Đổi tên thành <code>GhiChuQuanTrong.txt</code>. Nhấn Enter.</p>
+        <div class="img-grid">
+            <figure>
+                <img src="images/image38.png" alt="Rename">
+                <figcaption>Hình 13: Chọn Rename trong menu chuột phải</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image26.png" alt="Đổi tên">
+                <figcaption>Hình 14: Đổi tên thành GhiChuQuanTrong.txt</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image28.png" alt="Đã đổi tên">
+                <figcaption>Hình 15: File đã được đổi tên</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">7. Tạo thư mục con</div>
+        <p>Trong thư mục ThucHanh_NguyenHoangVan, nhấp chuột phải &rarr; <strong>New</strong> &rarr; <strong>Folder</strong>. Đặt tên là <code>TaiLieu</code>.</p>
+        <div class="img-grid">
+            <figure>
+                <img src="images/image11.png" alt="Tạo folder">
+                <figcaption>Hình 16: Chọn Create Folder</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image32.png" alt="Đặt tên">
+                <figcaption>Hình 17: Đặt tên thư mục là TaiLieu</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image35.png" alt="Tạo thành công">
+                <figcaption>Hình 18: Thư mục đã được tạo</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">8. Sao chép tệp tin (Copy &amp; Paste)</div>
+        <ul>
+            <li>Nhấp chuột phải vào tệp <code>GhiChuQuanTrong.txt</code> &rarr; chọn <strong>Copy</strong> (hoặc nhấn Ctrl + C).</li>
+        </ul>
+        <div class="img-grid">
+            <figure>
+                <img src="images/image21.png" alt="Copy">
+                <figcaption>Hình 19: Chọn Copy</figcaption>
+            </figure>
+        </div>
+        <ul>
+            <li>Nhấp đúp vào thư mục <code>TaiLieu</code>, nhấp chuột phải vào khoảng trống &rarr; chọn <strong>Paste</strong> (hoặc nhấn Ctrl + V). Bạn sẽ có một bản sao trong thư mục này.</li>
+        </ul>
+        <div class="img-grid">
+            <figure>
+                <img src="images/image8.png" alt="Mở thư mục TaiLieu">
+                <figcaption>Hình 20: Mở thư mục TaiLieu</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image23.png" alt="Paste">
+                <figcaption>Hình 21: Chọn Paste</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image34.png" alt="Sao chép thành công">
+                <figcaption>Hình 22: File đã được sao chép thành công</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">9. Di chuyển tệp tin (Cut &amp; Paste)</div>
+        <ul>
+            <li>Quay lại thư mục ThucHanh_NguyenHoangVan. Tạo một tệp mới tên là <code>DiChuyen.txt</code>.</li>
+        </ul>
+        <div class="img-grid">
+            <figure>
+                <img src="images/image30.png" alt="Tạo file mới">
+                <figcaption>Hình 23: Quay lại thư mục và chọn Create Document</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image19.png" alt="Đặt tên file">
+                <figcaption>Hình 24: Đặt tên DiChuyen.txt</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image37.png" alt="Tạo thành công">
+                <figcaption>Hình 25: File đã được tạo thành công</figcaption>
+            </figure>
+        </div>
+        
+        <ul>
+            <li>Nhấp chuột phải vào tệp DiChuyen.txt &rarr; chọn <strong>Cut</strong> (hoặc nhấn Ctrl + X).</li>
+        </ul>
+        <div class="img-grid">
+            <figure>
+                <img src="images/image27.png" alt="Cut">
+                <figcaption>Hình 26: Chọn Cut trong menu chuột phải</figcaption>
+            </figure>
+        </div>
+        
+        <ul>
+            <li>Nhấp đúp vào thư mục TaiLieu, nhấp chuột phải vào khoảng trống &rarr; chọn <strong>Paste</strong> (hoặc nhấn Ctrl + V). Tệp gốc sẽ biến mất khỏi vị trí cũ và xuất hiện ở vị trí mới.</li>
+        </ul>
+        <div class="img-grid">
+            <figure>
+                <img src="images/image6.png" alt="Mở thư mục">
+                <figcaption>Hình 27: Mở thư mục TaiLieu</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image16.png" alt="Paste">
+                <figcaption>Hình 28: Chọn Paste vào thư mục TaiLieu</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image22.png" alt="Kết quả 1">
+                <figcaption>Hình 29: File DiChuyen.txt đã được chuyển sang thư mục TaiLieu</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image14.png" alt="Kết quả 2">
+                <figcaption>Hình 30: File đã biến mất khỏi thư mục gốc</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">10. Xóa tệp tin</div>
+        <p>Trong thư mục TaiLieu, nhấp chuột phải vào tệp <code>GhiChuQuanTrong.txt</code> &rarr; chọn <strong>Move to Trash</strong>. Tệp sẽ được chuyển vào Thùng rác (Recycle Bin).</p>
+        <div class="img-grid">
+            <figure>
+                <img src="images/image4.png" alt="Move to Trash">
+                <figcaption>Hình 31a: Chọn Move to Trash</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image36.png" alt="Trong thùng rác">
+                <figcaption>Hình 31b: File đã được chuyển vào Recycle Bin</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">11. Xóa vĩnh viễn</div>
+        <p>Chọn tệp <code>DiChuyen.txt</code>, nhấn giữ phím <strong>Shift</strong> và nhấn phím <strong>Delete</strong>. Một cảnh báo sẽ hiện ra. Nếu đồng ý, tệp sẽ bị xóa vĩnh viễn mà không qua Thùng rác.</p>
+        <div class="img-grid">
+            <figure>
+                <img src="images/image25.png" alt="Shift Delete">
+                <figcaption>Hình 32: Nhấn phím tắt Shift + Delete</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image31.png" alt="Xác nhận xóa">
+                <figcaption>Hình 33: Chọn Delete khi cảnh báo hiện ra</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image39.png" alt="Đã xóa">
+                <figcaption>Hình 34: File đã bị xóa vĩnh viễn</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="step">
+        <div class="step-title">12. Khôi phục từ Thùng rác</div>
+        <p>Tìm biểu tượng <strong>Recycle Bin</strong> trên thanh tác vụ, nhấp đúp để mở. Tìm tệp <code>GhiChuQuanTrong.txt</code> đã xóa, nhấp chuột phải vào nó và chọn <strong>Restore</strong>. Tệp sẽ quay trở lại vị trí ban đầu.</p>
+        <div class="img-grid">
+            <figure>
+                <img src="images/image12.png" alt="Mở Recycle bin">
+                <figcaption>Hình 35: Mở Recycle Bin trên thanh tác vụ</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image9.png" alt="Restore file">
+                <figcaption>Hình 37: Chọn Restore trong menu chuột phải</figcaption>
+            </figure>
+            <figure>
+                <img src="images/image3.png" alt="Khôi phục thành công">
+                <figcaption>Hình 39: File đã được khôi phục về vị trí cũ</figcaption>
+            </figure>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

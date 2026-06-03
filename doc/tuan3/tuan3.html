@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Báo cáo Kỹ năng Prompt Engineering</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --blue: #2563eb;
+        --ink: #1e293b;
+        --body: #334155;
+        --bg: #f8fafc;
+        --border: #e2e8f0;
+    }
+    body {
+        font-family: 'Be Vietnam Pro', sans-serif;
+        background: var(--bg);
+        color: var(--body);
+        line-height: 1.75;
+        margin: 0;
+        padding: 2rem 1rem;
+    }
+    .container {
+        max-width: 950px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 3.5rem 4.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .report-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid var(--border);
+    }
+    .report-title {
+        color: var(--ink);
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+    }
+    h2 {
+        color: var(--blue);
+        font-size: 1.25rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        padding-left: 10px;
+        border-left: 4px solid var(--blue);
+    }
+    h3 {
+        color: var(--ink);
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-weight: 700;
+    }
+    p {
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+    ul {
+        margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    li {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Thiết kế cho các khối Prompt */
+    .prompt-box {
+        padding: 1rem 1.25rem;
+        border-radius: 6px;
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+    }
+    .prompt-basic {
+        background-color: #f1f5f9;
+        border-left: 4px solid #94a3b8;
+    }
+    .prompt-improved {
+        background-color: #eff6ff;
+        border-left: 4px solid #3b82f6;
+    }
+    .prompt-advanced {
+        background-color: #f0fdf4;
+        border-left: 4px solid #10b981;
+    }
+    .prompt-label {
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+        display: inline-block;
+    }
+    .prompt-basic .prompt-label { color: #475569; }
+    .prompt-improved .prompt-label { color: #1d4ed8; }
+    .prompt-advanced .prompt-label { color: #047857; }
+
+    /* Styles cho bảng tổng hợp */
+    .table-responsive {
+        overflow-x: auto;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+    }
+    th, td {
+        border: 1px solid var(--border);
+        padding: 12px 15px;
+        text-align: left;
+        vertical-align: top;
+    }
+    th {
+        background-color: var(--blue);
+        color: white;
+        font-weight: 600;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+
+    /* CREATE Framework list */
+    .create-list li {
+        margin-bottom: 0.8rem;
+    }
+    .create-list strong {
+        color: var(--blue);
+    }
+
+    /* Images */
+    .img-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .img-grid.single {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    figure {
+        margin: 0;
+        text-align: center;
+        background: var(--bg);
+        padding: 1rem;
+        border-radius: 8px;
+        border: 1px dashed #cbd5e1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+    figure img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    figcaption {
+        font-size: 0.85rem;
+        color: #64748b;
+        margin-top: 1rem;
+        font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+        .container { padding: 2rem 1.5rem; }
+        .img-grid { grid-template-columns: 1fr; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="report-header">
+        <h1 class="report-title">BÁO CÁO THỰC HÀNH KỸ NĂNG PROMPT ENGINEERING TRONG HỌC TẬP</h1>
+    </div>
+
+    <h2>I. Mục tiêu và Lựa chọn Tác vụ</h2>
+    <p><strong>Mục tiêu:</strong> Ứng dụng và đánh giá hiệu quả của các kỹ thuật Prompt Engineering (Role-prompting, Chain-of-thought, Few-shot) trong việc tối ưu hóa khả năng hỗ trợ học tập của Mô hình Ngôn ngữ Lớn.</p>
+    <p>Tôi đã lựa chọn 3 tác vụ học tập đại diện cho 3 mức độ nhận thức cốt lõi: Tiếp thu thông tin, Hiểu sâu khái niệm và Kiểm tra đánh giá.</p>
+
+    <h3>Tác vụ 1: Tóm tắt quy trình kỹ thuật phức tạp</h3>
+    <ul>
+        <li><strong>Bối cảnh:</strong> Tóm tắt tài liệu về luồng xử lý dữ liệu lớn trong Python (sử dụng các thư viện polars, openpyxl, xlsx2csv).</li>
+        <li><strong>Thách thức:</strong> Các tài liệu lập trình thường chứa lượng lớn code và giải thích rườm rà. Yêu cầu đặt ra là AI phải trích xuất được luồng logic cốt lõi mà không bị lạc vào các chi tiết cú pháp vụn vặt.</li>
+    </ul>
+
+    <h3>Tác vụ 2: Giải thích khái niệm Vật lý có tính phản trực giác</h3>
+    <ul>
+        <li><strong>Bối cảnh:</strong> Giải thích về "Chuyển động tròn đều" và gia tốc hướng tâm.</li>
+        <li><strong>Thách thức:</strong> Đa số học sinh thắc mắc: "Tại sao gọi là chuyển động ĐỀU (tốc độ không đổi) nhưng lại sinh ra GIA TỐC?". AI thường chỉ đưa ra công thức khô khan thay vì giải quyết trực diện điểm mâu thuẫn tư duy này.</li>
+    </ul>
+
+    <h3>Tác vụ 3: Tạo bộ câu hỏi ôn tập thuật toán có tính ứng dụng</h3>
+    <ul>
+        <li><strong>Bối cảnh:</strong> Tạo câu hỏi về thuật toán Sắp xếp Topo (Topological sort) ứng dụng trong việc render đồ họa Isometric.</li>
+        <li><strong>Thách thức:</strong> AI dễ tạo ra các câu hỏi định nghĩa lý thuyết nhàm chán. Yêu cầu là ép AI tạo ra câu hỏi tình huống thực tế và xây dựng các "đáp án nhiễu" dựa trên những lỗi sai logic phổ biến của người học.</li>
+    </ul>
+
+    <h2>II. Xây dựng và Thử nghiệm Prompt</h2>
+
+    <h3>Tác vụ 1: Tóm tắt quy trình xử lý dữ liệu Python</h3>
+    <div class="prompt-box prompt-basic">
+        <span class="prompt-label">Prompt Cơ bản:</span> Tóm tắt cách dùng polars và openpyxl để xử lý file Excel.
+    </div>
+    <div class="prompt-box prompt-improved">
+        <span class="prompt-label">Prompt Cải tiến:</span> Viết một đoạn tóm tắt ngắn về việc kết hợp openpyxl, xlsx2csv và polars để đọc file Excel dung lượng lớn nhanh hơn so với pandas. Chia thành 3 gạch đầu dòng.
+    </div>
+    <div class="prompt-box prompt-advanced">
+        <span class="prompt-label">Prompt Nâng cao (Tối ưu):</span> Đóng vai một Data Engineer cấp cao. Hãy tóm tắt luồng xử lý dữ liệu tối ưu: chuyển đổi file Excel nặng sang CSV (dùng openpyxl, xlsx2csv), sau đó load vào DataFrame.<br><br>
+        <strong>Yêu cầu cấu trúc:</strong><br>
+        - Một câu tóm tắt lý do tại sao quy trình này vượt trội hơn pandas.<br>
+        - Các bước thực hiện (đánh số 1, 2, 3) trình bày cực kỳ ngắn gọn.<br>
+        - Giới hạn tổng độ dài dưới 150 từ.
+    </div>
+
+    <h3>Tác vụ 2: Giải thích chuyển động tròn đều trong Vật lý</h3>
+    <div class="prompt-box prompt-basic">
+        <span class="prompt-label">Prompt Cơ bản:</span> Giải thích chuyển động tròn đều và gia tốc hướng tâm là gì.
+    </div>
+    <div class="prompt-box prompt-improved">
+        <span class="prompt-label">Prompt Cải tiến:</span> Giải thích khái niệm gia tốc hướng tâm trong chuyển động tròn đều cho một học sinh lớp 10. Hãy dùng một ví dụ thực tế để minh họa.
+    </div>
+    <div class="prompt-box prompt-advanced">
+        <span class="prompt-label">Prompt Nâng cao (Tối ưu):</span> Đóng vai một giáo viên Vật lý chuyên giải quyết các hiểu lầm cốt lõi của học sinh. Khái niệm: Chuyển động tròn đều và Gia tốc hướng tâm.<br><br>
+        Hãy sử dụng kỹ thuật "Suy nghĩ từng bước" (Chain-of-thought) để giải thích điểm mâu thuẫn sau: "Tại sao tốc độ không đổi mà vẫn có gia tốc?".<br>
+        - Bước 1: Đưa ra ví dụ về một chiếc xe chạy qua khúc cua gắt.<br>
+        - Bước 2: Chỉ ra sự khác biệt sống còn giữa "Tốc độ" và "Vận tốc"<br>
+        - Bước 3: Kết luận tại sao sự thay đổi hướng lại sinh ra gia tốc hướng tâm, dù đồng hồ tốc độ trên xe không đổi. Giọng văn mạch lạc, mang tính gợi mở.
+    </div>
+
+    <h3>Tác vụ 3: Tạo bộ câu hỏi thuật toán Sắp xếp Topo</h3>
+    <div class="prompt-box prompt-basic">
+        <span class="prompt-label">Prompt Cơ bản:</span> Tạo 3 câu hỏi trắc nghiệm về thuật toán Topological sort.
+    </div>
+    <div class="prompt-box prompt-improved">
+        <span class="prompt-label">Prompt Cải tiến:</span> Tạo 3 câu hỏi trắc nghiệm về thuật toán Topological sort dùng trong phát triển game. Cung cấp đáp án A, B, C, D và chỉ ra câu đúng.
+    </div>
+    <div class="prompt-box prompt-advanced">
+        <span class="prompt-label">Prompt Nâng cao (Tối ưu):</span> Đóng vai một Giảng viên Khoa học Máy tính. Hãy tạo một mini-quiz kiểm tra sự hiểu biết về việc ứng dụng "Thuật toán sắp xếp Topo" để giải quyết bài toán render đồ họa Isometric 2D (xác định thứ tự vẽ các vật thể để không bị đè hình sai logic).<br><br>
+        <strong>Yêu cầu:</strong><br>
+        - Phải có ít nhất 1 câu hỏi đưa ra một tình huống cụ thể (ví dụ: nhân vật đứng sau cái cây).<br>
+        - Với mỗi câu hỏi, cung cấp Đáp án đúng và GIẢI THÍCH CHI TIẾT lý do tại sao một đáp án nhiễu cụ thể lại dễ gây nhầm lẫn cho sinh viên.
+    </div>
+
+    <h2>III. Phân tích Hiệu quả Prompt</h2>
+    <p>Bảng dưới đây trình bày sự khác biệt về chất lượng đầu ra giữa phiên bản Cơ bản và Nâng cao, từ đó rút ra phân tích về mặt phương pháp luận.</p>
+    
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 15%">Tác vụ</th>
+                    <th style="width: 25%">Nhược điểm của Prompt Cơ bản</th>
+                    <th style="width: 25%">Ưu điểm vượt trội của Prompt Nâng cao</th>
+                    <th style="width: 35%">Phân tích cơ chế hoạt động (Tại sao lại hiệu quả?)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. Tóm tắt (Python)</strong></td>
+                    <td>AI trả về một đoạn văn bản dài, giải thích lan man định nghĩa của từng thư viện, không nêu bật được sự kết nối giữa chúng.</td>
+                    <td>Đầu ra tuân thủ đúng định dạng đánh số, so sánh trực diện được tốc độ với pandas, bỏ qua các chi tiết lý thuyết không cần thiết.</td>
+                    <td><strong>Role-prompting & Ràng buộc cấu trúc:</strong> Bằng cách gán vai "Data Engineer" và thiết lập "Ràng buộc độ dài", ta ép AI chuyển từ chế độ "Giải thích bách khoa toàn thư" sang chế độ "Báo cáo kỹ thuật trọng tâm".</td>
+                </tr>
+                <tr>
+                    <td><strong>2. Giải thích (Vật lý)</strong></td>
+                    <td>Đưa ra công thức a = v²/r và định nghĩa sách giáo khoa, không giải quyết được vướng mắc tư duy của người học.</td>
+                    <td>Tách bạch rõ ràng giữa "Độ lớn" và "Hướng" của vector vận tốc thông qua ví dụ khúc cua, giải quyết triệt để sự mâu thuẫn tư duy.</td>
+                    <td><strong>Chain-of-thought (CoT):</strong> Việc chia nhỏ luồng giải thích thành 3 bước logic bắt buộc AI phải xây dựng nền tảng từ thực tế trước khi đi đến kết luận trừu tượng. Việc xác định rõ "mâu thuẫn cần giải quyết" giúp AI không đưa ra thông tin dư thừa.</td>
+                </tr>
+                <tr>
+                    <td><strong>3. Quiz (Thuật toán)</strong></td>
+                    <td>Câu hỏi mang tính ghi nhớ (như: Độ phức tạp thời gian là bao nhiêu?), thiếu tính ứng dụng thực tiễn.</td>
+                    <td>Đặt thuật toán vào bối cảnh đồ họa Isometric. Các phần giải thích đáp án sai mang lại giá trị ôn tập rất cao.</td>
+                    <td><strong>Contextualizing & Negative Constraints:</strong> Thay vì hỏi thuật toán chung chung, việc gắn chặt vào "render isometric" buộc AI truy xuất dữ liệu liên ngành. Yêu cầu "giải thích đáp án nhiễu" ép AI mô phỏng lại quá trình tư duy sai lầm của con người, tạo ra một công cụ học tập chủ động.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>IV. Tổng hợp Nguyên tắc Viết Prompt Hiệu quả</h2>
+    <p>Dựa trên quá trình thực nghiệm, có thể đúc kết quy trình xây dựng Prompt hiệu quả cho mục đích học tập thông qua khung <strong>C.R.E.A.T.E</strong>:</p>
+    
+    <ul class="create-list">
+        <li><strong>C - Context (Bối cảnh học thuật cụ thể):</strong> Không bao giờ yêu cầu AI làm việc trong không gian mở. Cần cung cấp bối cảnh cụ thể (ví dụ: sử dụng thư viện nào trong Python, ứng dụng thuật toán vào mảng nào của Game Dev) để khoanh vùng dữ liệu truy xuất của AI.</li>
+        <li><strong>R - Role (Định hình vai trò chuyên gia):</strong> Việc gán vai (Giáo viên Vật lý, Kỹ sư Dữ liệu) không chỉ thay đổi giọng văn mà còn thay đổi "trọng số" các từ khóa mà thuật toán của AI lựa chọn để phản hồi, giúp câu trả lời chuyên sâu hơn.</li>
+        <li><strong>E - Expectation (Xác định mục tiêu nhận thức):</strong> Chỉ rõ đầu ra để giải quyết vấn đề gì (ví dụ: "giải quyết hiểu lầm cốt lõi" thay vì chỉ "giải thích").</li>
+        <li><strong>A - Action steps (Định hướng luồng tư duy):</strong> Sử dụng kỹ thuật Chain-of-thought (Bước 1, Bước 2...) đối với các khái niệm phức tạp để ngăn AI đốt cháy giai đoạn hoặc đưa ra kết luận thiếu tính logic.</li>
+        <li><strong>T - Template (Ràng buộc định dạng):</strong> Thiết lập ranh giới rõ ràng về định dạng (số từ, gạch đầu dòng, cấu trúc câu hỏi/đáp án) giúp thông tin đầu ra có tính tổ chức cao, dễ dàng tiêu hóa.</li>
+        <li><strong>E - Edge cases (Tính đến các trường hợp sai lệch):</strong> Khi yêu cầu AI tạo nội dung đánh giá (như bài tập, câu hỏi), cần yêu cầu AI xây dựng cả những phương án sai hợp lý để tăng độ khó và tính thực tiễn cho bộ tài liệu.</li>
+    </ul>
+    
+    <p><strong>Kết luận:</strong> Prompt Engineering trong học tập không đơn thuần là việc đặt câu hỏi, mà là quá trình thiết kế một hệ thống chỉ dẫn tinh gọn để định hướng khả năng suy luận vô hạn của AI vào giải quyết một nút thắt nhận thức cụ thể của người học.</p>
+
+    <h2>Ảnh kết quả thực nghiệm</h2>
+    
+    <h3>Tác vụ 1:</h3>
+    <div class="img-grid single">
+        <figure>
+            <img src="images/img1.png" alt="Kết quả Tác vụ 1">
+            <figcaption>Kết quả thực nghiệm Tác vụ 1</figcaption>
+        </figure>
+    </div>
+
+    <h3>Tác vụ 2:</h3>
+    <div class="img-grid single">
+        <figure>
+            <img src="images/img2.png" alt="Kết quả Tác vụ 2">
+            <figcaption>Kết quả thực nghiệm Tác vụ 2</figcaption>
+        </figure>
+    </div>
+
+    <h3>Tác vụ 3:</h3>
+    <div class="img-grid">
+        <figure>
+            <img src="images/img3.png" alt="Kết quả Tác vụ 3 - Hình 1">
+            <figcaption>Câu hỏi Quiz - Hình 1</figcaption>
+        </figure>
+        <figure>
+            <img src="images/img4.png" alt="Kết quả Tác vụ 3 - Hình 2">
+            <figcaption>Câu hỏi Quiz - Hình 2</figcaption>
+        </figure>
+        <figure>
+            <img src="images/img5.png" alt="Kết quả Tác vụ 3 - Hình 3">
+            <figcaption>Câu hỏi Quiz - Hình 3</figcaption>
+        </figure>
+    </div>
+
+</div>
+
+</body>
+</html>

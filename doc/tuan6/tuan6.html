@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Báo cáo Đạo đức AI</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --blue: #2563eb;
+        --ink: #1e293b;
+        --body: #334155;
+        --bg: #f8fafc;
+        --border: #e2e8f0;
+        --accent: #10b981;
+    }
+    body {
+        font-family: 'Be Vietnam Pro', sans-serif;
+        background: var(--bg);
+        color: var(--body);
+        line-height: 1.75;
+        margin: 0;
+        padding: 2rem 1rem;
+    }
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 3.5rem 4rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    
+    /* Header Report */
+    .report-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid var(--border);
+    }
+    .report-title {
+        color: var(--ink);
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
+    }
+    .student-info {
+        background-color: #f8fafc;
+        border: 1px dashed #cbd5e1;
+        border-radius: 8px;
+        padding: 1.25rem 2rem;
+        display: inline-block;
+        text-align: left;
+    }
+    .student-info p {
+        margin: 0.3rem 0;
+        font-size: 0.95rem;
+    }
+    .student-info strong {
+        display: inline-block;
+        min-width: 120px;
+        color: var(--navy);
+    }
+
+    h2 {
+        color: var(--blue);
+        font-size: 1.25rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        padding-left: 12px;
+        border-left: 4px solid var(--blue);
+        text-transform: uppercase;
+    }
+    h3 {
+        color: var(--ink);
+        font-size: 1.05rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-weight: 700;
+    }
+    p {
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+    
+    /* Intro Box */
+    .intro-box {
+        background-color: #eff6ff;
+        border-left: 4px solid var(--blue);
+        padding: 1.25rem 1.5rem;
+        border-radius: 6px;
+        margin-bottom: 2rem;
+        font-size: 0.95rem;
+        font-style: italic;
+    }
+
+    /* Interaction Log styling */
+    .interaction-log {
+        background-color: #f8fafc;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .log-title {
+        font-weight: 700;
+        color: var(--blue);
+        margin-bottom: 0.75rem;
+        font-size: 1rem;
+    }
+    .prompt-box {
+        background-color: #ffffff;
+        border-left: 3px solid #64748b;
+        padding: 0.75rem 1rem;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+    }
+    .output-box {
+        background-color: #f0fdf4;
+        border-left: 3px solid #10b981;
+        padding: 0.75rem 1rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+    }
+
+    /* C.O.D.I.N.G Framework Styling */
+    .coding-framework {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    .coding-item {
+        display: flex;
+        align-items: flex-start;
+        background-color: #ffffff;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.25rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .coding-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        border-color: #bfdbfe;
+    }
+    .coding-letter {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--blue);
+        background-color: #eff6ff;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        flex-shrink: 0;
+        margin-right: 1.25rem;
+    }
+    .coding-content h4 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.05rem;
+        color: var(--ink);
+    }
+    .coding-content p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: var(--body);
+    }
+
+    /* Hình ảnh phụ lục */
+    .img-wrap {
+        margin: 2rem auto;
+        text-align: center;
+        max-width: 700px;
+    }
+    .img-wrap figure {
+        margin: 0;
+        background: var(--bg);
+        padding: 1rem;
+        border-radius: 8px;
+        border: 1px dashed #cbd5e1;
+    }
+    .img-wrap img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .img-wrap figcaption {
+        font-size: 0.9rem;
+        color: var(--ink);
+        font-weight: 600;
+        margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .container { padding: 2rem 1.5rem; }
+        .coding-item { flex-direction: column; }
+        .coding-letter { margin-bottom: 1rem; margin-right: 0; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="report-header">
+        <h1 class="report-title">SỬ DỤNG TRÍ TUỆ NHÂN TẠO CÓ TRÁCH NHIỆM VÀ ĐẠO ĐỨC TRONG HỌC TẬP, NGHIÊN CỨU</h1>
+        
+    </div>
+
+    <div class="intro-box">
+        <strong>Lời mở đầu:</strong> Sự bùng nổ của các mô hình ngôn ngữ lớn (LLMs) như ChatGPT, Gemini hay Claude đang định hình lại toàn diện phương pháp tiếp cận tri thức trong môi trường đại học. Đặc biệt đối với sinh viên ngành Trí tuệ nhân tạo, AI không chỉ là một công cụ hỗ trợ mà còn là đối tượng nghiên cứu cốt lõi. Báo cáo này được thực hiện nhằm phân tích chính sách học thuật hiện hành, thực hành áp dụng AI vào một bài toán lập trình cụ thể, từ đó hệ thống hóa các vấn đề đạo đức và xây dựng bộ nguyên tắc cá nhân để làm chủ công nghệ một cách minh bạch, trách nhiệm.
+    </div>
+
+    <h2>I. NGHIÊN CỨU VÀ PHÂN TÍCH CHÍNH SÁCH CỦA TRƯỜNG ĐẠI HỌC VỀ VIỆC SỬ DỤNG AI</h2>
+    
+    <h3>1. Khảo sát văn bản và chính sách hiện hành tại UET-VNU</h3>
+    <p>Hiện tại, Trường Đại học Công nghệ (ĐHQGHN) quản lý các vấn đề liêm chính học thuật chủ yếu thông qua Quy chế đào tạo đại học (như Quy chế 3626) và các quy định về công tác sinh viên (Quy định 32/QĐ-ĐHCN). Trọng tâm của các quy chế này là nghiêm cấm mọi hình thức gian lận, mạo danh kết quả và đạo văn (plagiarism) trong thi cử, kiểm tra và làm đồ án.</p>
+    <p>Mặc dù chưa có một bộ quy tắc hoàn toàn độc lập quy định chi tiết từng cú pháp lệnh được phép dùng với AI tạo sinh, nhưng tinh thần của quy chế đã thiết lập một "lằn ranh đỏ" rõ ràng: Bất kỳ sản phẩm học thuật nào được nộp dưới tên sinh viên phải phản ánh trung thực năng lực và sự nỗ lực tư duy của chính sinh viên đó.</p>
+
+    <h3>2. So sánh với các mô hình chính sách quốc tế và nhận định cá nhân</h3>
+    <p>Nhiều trường đại học lớn trên thế giới và tại Việt Nam (như Đại học RMIT) đang áp dụng hệ thống "Đèn giao thông" (Traffic Light System) đối với AI: Đỏ (cấm tuyệt đối trong thi cử truyền thống), Vàng (cho phép dùng để rà soát lỗi, tìm ý tưởng nhưng phải trích dẫn) và Xanh (khuyến khích dùng làm công cụ phân tích dữ liệu).</p>
+    <p>Đối chiếu với môi trường UET, việc ứng dụng AI có thể được diễn dịch theo hướng cởi mở nhưng có kiểm soát chặt chẽ về đầu ra. Việc cấm đoán sinh viên sử dụng AI là một rào cản phi thực tế, đặc biệt khi năng lực sử dụng AI (AI Literacy) đang trở thành kỹ năng thiết yếu của thế kỷ 21. Chính sách của trường đòi hỏi sinh viên phải chuyển dịch từ năng lực "ghi nhớ thông tin" sang năng lực "đánh giá thông tin". Khi AI sinh ra hàng ngàn dòng code hay văn bản trong vài giây, sinh viên phải đóng vai trò là "Tổng biên tập" – người kiểm chứng tính logic, tính tối ưu và chịu trách nhiệm giải trình tuyệt đối cho sản phẩm cuối cùng.</p>
+
+    <h2>II. THỰC HIỆN NHIỆM VỤ HỌC TẬP VỚI SỰ HỖ TRỢ CỦA AI</h2>
+    
+    <h3>1. Mô tả nhiệm vụ học thuật</h3>
+    <p><strong>Nhiệm vụ:</strong> Phát triển và lập trình một engine game Tic-Tac-Toe cơ bản bằng C++, trong đó tích hợp một bot AI sử dụng thuật toán Minimax kết hợp kỹ thuật cắt tỉa Alpha-Beta (Alpha-Beta Pruning) để tối ưu hóa không gian duyệt cây trò chơi.</p>
+
+    <h3>2. Nhật ký tương tác (Human-AI Interaction Log)</h3>
+    
+    <div class="interaction-log">
+        <div class="log-title">Lượt tương tác thứ 1: Tìm hiểu lý thuyết lõi</div>
+        <div class="prompt-box">
+            <strong>Prompt:</strong> "Hãy giải thích chi tiết toán học đằng sau thuật toán Minimax có tích hợp cắt tỉa Alpha-Beta cho game Tic-Tac-Toe. Cung cấp mã giả (pseudocode) thể hiện rõ cách các giá trị alpha và beta được truyền qua các node Max và Min."
+        </div>
+        <div class="output-box">
+            <strong>Đầu ra của AI:</strong> AI sinh ra một bài giải thích trực quan, mô tả hai tác nhân: MAX (cố gắng tối đa hóa điểm số) và MIN (cố gắng giảm thiểu điểm số). AI cung cấp hàm đệ quy <code>minimax(node, depth, alpha, beta, maximizingPlayer)</code> và giải thích điều kiện cắt tỉa: Nếu <code>beta <= alpha</code>, nhánh đó không cần duyệt tiếp vì trạng thái đó sẽ không bao giờ được người chơi ở nhánh trên lựa chọn.
+        </div>
+    </div>
+
+    <div class="interaction-log">
+        <div class="log-title">Lượt tương tác thứ 2: Hỗ trợ cấu trúc đồ án</div>
+        <div class="prompt-box">
+            <strong>Prompt:</strong> "Tôi cần viết một file README dài khoảng 2 trang giải thích cơ chế bot AI này. Hãy lập một dàn ý cấu trúc tài liệu thật chuyên nghiệp."
+        </div>
+        <div class="output-box">
+            <strong>Đầu ra của AI:</strong> AI đề xuất cấu trúc: (1) Tổng quan kiến trúc Engine, (2) Đánh giá trạng thái bảng (Evaluation Function), (3) So sánh độ phức tạp thời gian khi có và không có Alpha-Beta, (4) Hướng dẫn biên dịch chương trình.
+        </div>
+    </div>
+
+    <h3>3. Đánh giá, chỉnh sửa và tích hợp đầu ra</h3>
+    <p><strong>Kiểm chứng logic:</strong> Lý thuyết AI cung cấp là hoàn toàn chuẩn xác so với giáo trình thuật toán. Tuy nhiên, khi phân tích mã giả, tôi nhận thấy AI cố gắng tối ưu hóa việc lưu trữ trạng thái bàn cờ bằng cách gợi ý dùng kỹ thuật dịch bit (bitboards).</p>
+    <p><strong>Chỉnh sửa:</strong> Đối với không gian trạng thái nhỏ như Tic-Tac-Toe (chỉ 3^9 trạng thái tối đa), việc dùng bitboard là phức tạp hóa vấn đề không cần thiết. Tôi quyết định loại bỏ gợi ý này của AI. Tôi tự thiết kế bảng băm bằng mảng 1D đơn giản trong C++ để quản lý trạng thái.</p>
+    <p><strong>Tích hợp:</strong> Toàn bộ cấu trúc thư mục, vòng lặp game chính (game loop), và hàm đánh giá (heuristic) đều do tôi tự viết tay. Dàn ý README của AI được tôi áp dụng, nhưng nội dung bên trong là những phân tích kỹ thuật do tự tôi đúc kết qua quá trình gỡ lỗi (debug).</p>
+
+    <h3>4. Khai báo và minh bạch hóa</h3>
+    <p>Trong phần cuối của đồ án, tôi đã trích dẫn: <em>"Nghiên cứu này có sử dụng mô hình Gemini (Google) làm công cụ hỗ trợ tra cứu mã giả của thuật toán cắt tỉa Alpha-Beta và lập dàn ý tài liệu. Quá trình hiện thực hóa bằng C++ và thiết kế logic game được thực hiện độc lập."</em></p>
+
+    <h2>III. PHÂN TÍCH CÁC VẤN ĐỀ ĐẠO ĐỨC TRONG VIỆC SỬ DỤNG AI TRONG HỌC THUẬT</h2>
+    <p>Việc áp dụng AI tạo sinh vào môi trường đại học làm dấy lên ba vấn đề đạo đức cốt lõi đòi hỏi sinh viên phải có nhận thức sâu sắc về năng lực thông tin:</p>
+    
+    <h3>1. Lằn ranh mờ giữa sự hỗ trợ học thuật và gian lận</h3>
+    <p>Bản chất của giáo dục đại học không nằm ở việc nộp một đoạn code chạy đúng hay một bài luận không sai chính tả, mà là quá trình tư duy để tạo ra chúng. Nếu dùng AI để gỡ rối một vòng lặp bị lặp vô hạn (infinite loop) trong C++, đó là quá trình học tập. Nhưng nếu sao chép nguyên văn hàm Minimax do AI viết sẵn mà không hiểu cách call stack đệ quy hoạt động, đó là hành vi "rút ruột" tri thức. Lằn ranh đạo đức nằm ở năng lực giải trình: Bạn có thể viết lại và bảo vệ đoạn code/luận điểm đó trước hội đồng trong một căn phòng không có Internet hay không?</p>
+
+    <h3>2. Vấn đề vi phạm bản quyền gián tiếp và ô nhiễm dữ liệu</h3>
+    <p>Các mô hình AI được huấn luyện trên hàng tỷ văn bản, kho lưu trữ mã nguồn mở (như GitHub) và các bài báo khoa học có bản quyền mà tác giả gốc không hề được ghi nhận. Khi sinh viên dùng AI tạo ra nội dung và nhận là của mình, họ đang tham gia vào một quá trình tước đoạt chất xám quy mô lớn. Tệ hơn nữa, hiện tượng "ảo giác" (Hallucination) khiến AI tự bịa ra các thư viện lập trình không tồn tại hoặc các bài báo khoa học giả mạo. Việc đưa các trích dẫn giả này vào bài tập làm suy đồi tính toàn vẹn của hệ thống tri thức.</p>
+
+    <h3>3. Sự thoái hóa của năng lực tư duy độc lập</h3>
+    <p>Đây là rủi ro đạo đức lớn nhất đối với chính bản thân người học. Việc liên tục "khoán trắng" các bài tập khó cho AI sẽ làm teo tóp kỹ năng giải quyết vấn đề, tư duy thuật toán và sự bền bỉ của trí tuệ. Khi bước ra thị trường lao động, đối mặt với các hệ thống phần mềm phức tạp chưa từng có trong bộ nhớ đào tạo của AI, những sinh viên lạm dụng AI sẽ rơi vào trạng thái tê liệt vì đã đánh mất khả năng tự khởi tạo tư duy từ con số 0.</p>
+
+    <h2>IV. BỘ NGUYÊN TẮC CÁ NHÂN VỀ SỬ DỤNG AI CÓ TRÁCH NHIỆM</h2>
+    <p>Để làm chủ AI thay vì bị AI làm chủ, tôi xây dựng hệ thống 6 nguyên tắc thực hành cá nhân, viết tắt là <strong>C.O.D.I.N.G</strong>:</p>
+
+    <div class="coding-framework">
+        <div class="coding-item">
+            <div class="coding-letter">C</div>
+            <div class="coding-content">
+                <h4>Critical Thinking First (Tư duy cá nhân đi trước)</h4>
+                <p>Bắt buộc dành ít nhất 30 phút tự phân tích bài toán, vẽ sơ đồ khối và phác thảo cấu trúc trước khi nhập bất kỳ câu hỏi nào vào AI. AI chỉ dùng để phản biện lại tư duy của tôi, không dùng để bắt đầu tư duy.</p>
+            </div>
+        </div>
+        <div class="coding-item">
+            <div class="coding-letter">O</div>
+            <div class="coding-content">
+                <h4>Ownership (Làm chủ tri thức)</h4>
+                <p>Tuyệt đối không sao chép nguyên trạng (copy-paste) output của AI. Bất kỳ đoạn văn bản hay khối mã nguồn nào được tham khảo đều phải được gõ lại, tái cấu trúc và cá nhân hóa theo cách hiểu sâu sắc của bản thân.</p>
+            </div>
+        </div>
+        <div class="coding-item">
+            <div class="coding-letter">D</div>
+            <div class="coding-content">
+                <h4>Data Privacy (Bảo mật dữ liệu)</h4>
+                <p>Nhận thức rõ môi trường AI là không gian công cộng. Tuyệt đối không tải lên các tài liệu nội bộ, thông tin cá nhân hoặc các mã nguồn của dự án đang trong quá trình bảo mật/nghiên cứu.</p>
+            </div>
+        </div>
+        <div class="coding-item">
+            <div class="coding-letter">I</div>
+            <div class="coding-content">
+                <h4>Independent Verification (Kiểm chứng độc lập)</h4>
+                <p>Mọi "fact", số liệu, định lý hay thư viện code do AI cung cấp phải được xác minh chéo (cross-check) thông qua ít nhất một nguồn học thuật chính thống hoặc tài liệu đặc tả (documentation) gốc.</p>
+            </div>
+        </div>
+        <div class="coding-item">
+            <div class="coding-letter">N</div>
+            <div class="coding-content">
+                <h4>Non-delegation of Core Logic (Không ủy quyền logic cốt lõi)</h4>
+                <p>AI có thể hỗ trợ tạo ra dữ liệu giả (mock data), dịch ngôn ngữ hoặc tìm lỗi cú pháp (syntax errors), nhưng các thuật toán lõi, logic kinh doanh và lập luận học thuật trọng tâm phải do chính tay tôi tạo ra.</p>
+            </div>
+        </div>
+        <div class="coding-item">
+            <div class="coding-letter">G</div>
+            <div class="coding-content">
+                <h4>Genuine Citation (Trích dẫn minh bạch)</h4>
+                <p>Trung thực ghi nhận sự đóng góp của AI. Chủ động đính kèm một đoạn mô tả (Methodology) ngắn gọn trong các báo cáo, nêu rõ loại AI đã dùng (ví dụ: ChatGPT, Gemini), ngày tháng sử dụng và mục đích cụ thể.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>V. INFOGRAPHIC MINH HỌA: "ĐẠO ĐỨC AI TRONG HỌC THUẬT"</h2>
+    <div class="img-wrap">
+        <figure>
+            <img src="images/img1.png" alt="Infographic Đạo đức AI">
+            <figcaption>Infographic minh họa các nguyên tắc sử dụng AI trong học thuật</figcaption>
+        </figure>
+    </div>
+
+    <h2>KẾT LUẬN</h2>
+    <p>Hành trình học tập trong kỷ nguyên AI không còn là cuộc đua xem ai nhớ nhiều thông tin hơn, mà là ai biết đặt câu hỏi sắc bén hơn và ai có đạo đức dữ liệu vững vàng hơn. Việc tuân thủ liêm chính học thuật không phải là đối phó với các quy chế của nhà trường, mà là sự bảo vệ nghiêm ngặt đối với giá trị cốt lõi của bản thân: năng lực suy nghĩ độc lập. Khai thác AI một cách có trách nhiệm chính là chìa khóa để sinh viên bước vào thế giới nghề nghiệp thực thụ.</p>
+
+</div>
+
+</body>
+</html>

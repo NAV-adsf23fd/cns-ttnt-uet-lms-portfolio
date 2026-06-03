@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Báo cáo Hợp tác trực tuyến</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --blue: #2563eb;
+        --ink: #1e293b;
+        --body: #334155;
+        --bg: #f8fafc;
+        --border: #e2e8f0;
+        --highlight: #eff6ff;
+    }
+    body {
+        font-family: 'Be Vietnam Pro', sans-serif;
+        background: var(--bg);
+        color: var(--body);
+        line-height: 1.75;
+        margin: 0;
+        padding: 2rem 1rem;
+    }
+    .container {
+        max-width: 950px;
+        margin: 0 auto;
+        background: #ffffff;
+        padding: 3.5rem 4.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .report-header {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid var(--border);
+    }
+    .report-title {
+        color: var(--ink);
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+    }
+    
+    /* Khung thông tin chung */
+    .info-box {
+        background-color: #f8fafc;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .info-box p {
+        margin: 0.5rem 0;
+        font-size: 0.95rem;
+    }
+    .info-box strong {
+        color: var(--navy);
+        display: inline-block;
+        min-width: 160px;
+    }
+
+    h2 {
+        color: var(--blue);
+        font-size: 1.25rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        padding-left: 10px;
+        border-left: 4px solid var(--blue);
+    }
+    h3 {
+        color: var(--ink);
+        font-size: 1.05rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-weight: 700;
+    }
+    p {
+        margin-bottom: 1rem;
+        text-align: justify;
+    }
+    ul {
+        margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    li {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Styles cho bảng tổng hợp */
+    .table-responsive {
+        overflow-x: auto;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+    }
+    th, td {
+        border: 1px solid var(--border);
+        padding: 12px 15px;
+        text-align: left;
+        vertical-align: middle;
+    }
+    th {
+        background-color: var(--blue);
+        color: white;
+        font-weight: 600;
+    }
+    tr:nth-child(even) { background-color: #f8fafc; }
+    
+    /* Highlight hàng của người dùng */
+    .row-highlight {
+        background-color: #dbeafe !important;
+        font-weight: 500;
+    }
+
+    /* Badges */
+    .status-done {
+        display: inline-block;
+        background-color: #dcfce7;
+        color: #16a34a;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    .conclusion-box {
+        background-color: #f0fdf4;
+        border-left: 4px solid #10b981;
+        padding: 1rem 1.25rem;
+        border-radius: 6px;
+        margin-top: 1rem;
+        font-weight: 500;
+    }
+
+    /* Image Grid */
+    .img-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 650px;
+        margin: 1.5rem auto;
+        gap: 1.5rem;
+    }
+    figure {
+        margin: 0;
+        text-align: center;
+        background: var(--bg);
+        padding: 1rem;
+        border-radius: 8px;
+        border: 1px dashed #cbd5e1;
+        box-sizing: border-box;
+    }
+    figure img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    figcaption {
+        font-size: 0.85rem;
+        color: #64748b;
+        margin-top: 1rem;
+        font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+        .container { padding: 2rem 1.5rem; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="report-header">
+        <h1 class="report-title">CÔNG CỤ HỢP TÁC TRỰC TUYẾN VÀ NĂNG LỰC QUẢN LÝ CÁ NHÂN TRONG DỰ ÁN NHÓM</h1>
+    </div>
+
+    <div class="info-box">
+        <p><strong>Tên dự án:</strong> AI trong ung thư học – Từ chẩn đoán chính xác đến phẫu thuật thông minh</p>
+        <p><strong>Vai trò của tôi:</strong> Viết phần Thách thức của AI (chi phí, dữ liệu, dương tính giả, pháp lý)</p>
+        <p><strong>Thời gian thực hiện:</strong> Tuần 1 (7/4 – 14/4/2026)</p>
+    </div>
+
+    <h2>I. Các công cụ hợp tác trực tuyến đã sử dụng</h2>
+    <p>Nhóm tôi gồm 5 thành viên, thực hiện dự án nghiên cứu và thiết kế slide thuyết trình về ứng dụng của AI trong ung thư học. Chúng tôi sử dụng bộ công cụ tối giản nhưng đáp ứng đủ 3 nhóm chức năng theo yêu cầu.</p>
+    
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 25%">Nhóm chức năng</th>
+                    <th style="width: 25%">Tên công cụ</th>
+                    <th style="width: 50%">Mục đích sử dụng</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Soạn thảo cộng tác + Quản lý nhiệm vụ</strong></td>
+                    <td>Google Docs</td>
+                    <td>Viết nội dung, tạo bảng phân công, theo dõi tiến độ.</td>
+                </tr>
+                <tr>
+                    <td><strong>Lưu trữ & chia sẻ file</strong></td>
+                    <td>Google Drive</td>
+                    <td>Lưu slide, tài liệu tham khảo, phân quyền truy cập.</td>
+                </tr>
+                <tr>
+                    <td><strong>Giao tiếp nhóm</strong></td>
+                    <td>Zalo + Google Meet</td>
+                    <td>Thảo luận hằng ngày, họp trực tuyến, nhắc deadline.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="conclusion-box">
+        ➡ Tôi đã tham gia thiết lập và sử dụng thành thạo cả 3 nhóm công cụ trên.
+    </div>
+
+    <h2>II. Nội dung dự án</h2>
+    <p>Dự án của nhóm được chia thành các phần chính dựa theo cấu trúc của slide thuyết trình:</p>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 10%; text-align: center;">Phần</th>
+                    <th>Nội dung chi tiết</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">1</td>
+                    <td>Vấn đề ung thư toàn cầu (số liệu VN và thế giới).</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">2</td>
+                    <td>AI phát hiện khối u trên ảnh (CADe/CADx, CHIEF 94%, PathChat 90%).</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">3</td>
+                    <td>AI Agent & NLP (phân loại bệnh nhân, tóm tắt bệnh án, chatbot Zalo).</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">4</td>
+                    <td>AI định vị ranh giới u trong mổ (Robot Modus V Synaptive).</td>
+                </tr>
+                <tr class="row-highlight">
+                    <td style="text-align: center;">5</td>
+                    <td><strong>Thách thức của AI (chi phí, dữ liệu training, dương tính giả, trách nhiệm pháp lý).</strong></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">6</td>
+                    <td>Giải pháp (PPP, Federated Learning, AI-as-a-Service, kho dữ liệu ung thư VN).</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">7</td>
+                    <td>Tương lai & kết luận.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>III. Minh chứng chi tiết theo từng hoạt động</h2>
+    
+    <h3>1. Tự quản lý danh sách nhiệm vụ trên Google Docs</h3>
+    <p>Tôi đã tạo một bảng phân công nhiệm vụ ngay đầu file Google Docs chung của nhóm. Bảng có 5 cột: STT – Nhiệm vụ – Người phụ trách – Deadline – Trạng thái.</p>
+    
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th style="text-align: center; width: 8%">STT</th>
+                    <th style="width: 40%">Nhiệm vụ</th>
+                    <th style="width: 20%">Người phụ trách</th>
+                    <th style="width: 12%">Deadline</th>
+                    <th style="width: 20%">Trạng thái</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center;">1</td>
+                    <td>Tìm hiểu số liệu ung thư toàn cầu & VN</td>
+                    <td>Nguyễn Quốc Cường</td>
+                    <td>7/4</td>
+                    <td><span class="status-done">✅ Đã hoàn thành</span></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">2</td>
+                    <td>Tổng hợp các ứng dụng AI phát hiện khối u (CADe, CHIEF, PathChat)</td>
+                    <td>Lưu Gia Bình</td>
+                    <td>7/4</td>
+                    <td><span class="status-done">✅ Đã hoàn thành</span></td>
+                </tr>
+                <tr class="row-highlight">
+                    <td style="text-align: center;">3</td>
+                    <td>Viết phần Thách thức của AI (chi phí, dữ liệu, dương tính giả, pháp lý)</td>
+                    <td><strong>Nguyễn Hoàng Văn</strong></td>
+                    <td><strong>9/4</strong></td>
+                    <td><span class="status-done">✅ Đã hoàn thành</span></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">4</td>
+                    <td>Viết phần Giải pháp (PPP, Federated Learning, AI-as-a-Service)</td>
+                    <td>Lâm Tuấn Đạt</td>
+                    <td>9/4</td>
+                    <td><span class="status-done">✅ Đã hoàn thành</span></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">5</td>
+                    <td>Viết phần Tương lai & Kết luận</td>
+                    <td>Lê Gia Bảo</td>
+                    <td>10/4</td>
+                    <td><span class="status-done">✅ Đã hoàn thành</span></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">6</td>
+                    <td>Tổng hợp slide Canva / PowerPoint</td>
+                    <td>Cả nhóm</td>
+                    <td>12/4</td>
+                    <td><span class="status-done">✅ Đã hoàn thành</span></td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;">7</td>
+                    <td>Tổng hợp báo cáo cá nhân bài tập 1</td>
+                    <td>Nguyễn Quốc Cường</td>
+                    <td>14/4</td>
+                    <td><span class="status-done">✅ Đã hoàn thành</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><em>* Tôi đã cập nhật trạng thái nhiệm vụ ít nhất 3 lần trong tuần (từ "⏳ Chưa bắt đầu" → "🔄 Đang thực hiện" → "✅ Đã hoàn thành").</em></p>
+
+    <h3>2. Lịch sử chỉnh sửa, đóng góp nội dung trên Google Docs</h3>
+    <p>Tôi đã trực tiếp viết phần "Thách thức của AI" dựa trên nội dung từ slide (trang 7-9), bao gồm:</p>
+    <ul>
+        <li>Chi phí cao, bảo hiểm hạn chế (+$19/bệnh nhân).</li>
+        <li>Nguy cơ dương tính giả.</li>
+        <li>Dữ liệu training thiếu đa dạng (chênh lệch chủng tộc, giới tính, tuổi tác).</li>
+        <li>Trách nhiệm pháp lý khi AI sai sót.</li>
+    </ul>
+    <p>Tôi cũng tham gia chỉnh sửa, bổ sung phần "Giải pháp" dựa trên góp ý của các thành viên.</p>
+
+    <h3>3. Tương tác, thảo luận chủ động trên Zalo và Google Meet</h3>
+    <ul>
+        <li><strong>Trên Zalo nhóm:</strong> Tôi đã gửi hơn 12 tin nhắn thảo luận, nhắc deadline, đặt câu hỏi về nội dung AI, và trả lời các thành viên.
+            <ul>
+                <li><em>Ví dụ 1:</em> "Cả nhà ơi, phần thách thức của AI mình vừa viết xong. Ai đang làm phần giải pháp thì xem kỹ mục chi phí để đề xuất PPP cho phù hợp nhé."</li>
+                <li><em>Ví dụ 2:</em> "Bình ơi, bạn nhớ thêm số liệu CHIEF 94% từ trang 3 slide vào phần phát hiện khối u nha."</li>
+            </ul>
+        </li>
+        <li><strong>Trên Google Meet:</strong> Tôi là người chủ trì cuộc họp ngày 7/4 (lúc 22h00), đã điều phối nội dung, phân công nhiệm vụ, và tổng hợp ý kiến.</li>
+    </ul>
+
+    <h3>4. Tổ chức và lưu trữ tệp tin khoa học trên Google Drive</h3>
+    <p>Tôi đã thiết lập cấu trúc thư mục trên Google Drive một cách khoa học và áp dụng các quy tắc sau:</p>
+    <ul>
+        <li><strong>Quy tắc đặt tên:</strong> <code>[Nội dung]_[Phiên bản]_[Ngày]</code> hoặc theo chức năng.</li>
+        <li><strong>Phân quyền:</strong> Tôi đã cấp quyền "Chỉnh sửa" cho tất cả thành viên nhóm.</li>
+    </ul>
+    
+    <div class="img-grid single">
+        <figure>
+            <img src="images/img1.png" alt="Cấu trúc thư mục Google Drive">
+            <figcaption>Cấu trúc thư mục dự án được tổ chức trên Google Drive</figcaption>
+        </figure>
+    </div>
+
+    <h2>IV. Phân tích hiệu quả của công cụ đối với công việc cá nhân</h2>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 25%">Công cụ</th>
+                    <th style="width: 75%">Hiệu quả với cá nhân tôi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Google Docs</strong></td>
+                    <td>Vừa viết nội dung chuyên sâu (thách thức của AI) vừa theo dõi tiến độ nhóm. Lịch sử phiên bản giúp tôi không sợ mất nội dung khi chỉnh sửa chéo.</td>
+                </tr>
+                <tr>
+                    <td><strong>Google Drive + Canva + Kiwi AI + AI Tools (Gemini, Deepseek, GPT)</strong></td>
+                    <td>Lưu trữ slide gốc và tài liệu tham khảo tập trung, dễ tìm kiếm. Đa dạng tác vụ AI giúp tìm kiếm nguồn thông tin phong phú và nhanh chóng.</td>
+                </tr>
+                <tr>
+                    <td><strong>Zalo + Google Meet</strong></td>
+                    <td>Zalo phù hợp để nhắc deadline nhanh và gửi file. Google Meet phù hợp cho các buổi họp có cấu trúc và chia sẻ màn hình slide.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <ul>
+        <li><strong>Ưu điểm lớn nhất:</strong> Nhóm thống nhất được một không gian làm việc chung, tránh tình trạng mỗi người gửi file qua lại lộn xộn.</li>
+        <li><strong>Nhược điểm:</strong> Google Docs không có tính năng tự động nhắc deadline, do đó tôi phải chủ động nhắc nhở thủ công qua Zalo.</li>
+    </ul>
+
+    <h2>V. Ba thách thức khi tương tác nhóm và cách giải quyết</h2>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 35%">Thách thức</th>
+                    <th style="width: 65%">Cách tôi giải quyết</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. Thành viên hiểu sai nội dung thuật ngữ AI</strong> (ví dụ: nhầm lẫn giữa CHIEF với PathChat).</td>
+                    <td>Tôi tạo một mục <em>"Chú thích thuật ngữ"</em> ngay đầu Google Docs, giải thích rõ CHIEF (Harvard, Nature 2024), PathChat (Đại học Y Harvard, 2024), CADe/CADx (Bệnh viện 199). Sau đó tag từng người vào Zalo để đọc kỹ lại.</td>
+                </tr>
+                <tr>
+                    <td><strong>2. Xung đột nội dung</strong> khi hai người cùng sửa một đoạn trong Google Docs.</td>
+                    <td>Tôi yêu cầu cả nhóm chuyển sang chế độ <strong>Suggesting (gợi ý)</strong> thay vì Editing. Tôi – với vai trò nhóm trưởng – sẽ xem xét duyệt hoặc từ chối các đề xuất chỉnh sửa đó để tránh đè nội dung.</td>
+                </tr>
+                <tr>
+                    <td><strong>3. Một thành viên không có thiết bị máy tính</strong> để họp Google Meet.</td>
+                    <td>Tôi đề nghị thành viên đó tham gia bằng ứng dụng điện thoại, đồng thời cử một người ghi biên bản (meeting minutes) trực tiếp trên Google Docs để họ có thể đọc lại các quyết định sau cuộc họp.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>VI. Đánh giá tổng thể & Bài học rút ra</h2>
+    <ul>
+        <li><strong>Điểm mạnh:</strong> Tôi đã tự quản lý tốt nhiệm vụ cá nhân và điều phối nhóm hiệu quả mà không cần công cụ quá phức tạp. Nội dung dự án có tính thực tiễn cao, bám sát các nghiên cứu khoa học.</li>
+        <li><strong>Điểm yếu:</strong> Nếu dự án kéo dài hơn 2 tuần, việc thiếu một công cụ quản lý dự án chuyên dụng và trực quan (như Trello, Notion) sẽ gây khó khăn trong việc theo dõi tổng thể.</li>
+        <li><strong>Bài học kinh nghiệm:</strong> Cần lựa chọn công cụ phù hợp với quy mô nhóm. Đối với nhóm 5 người làm dự án ngắn hạn, combo Google Docs + Drive + Zalo là đủ. Tuy nhiên, đối với dự án dài hơi và có nhiều luồng công việc hơn, chắc chắn phải sử dụng thêm Trello hoặc Asana.</li>
+    </ul>
+
+</div>
+
+</body>
+</html>
